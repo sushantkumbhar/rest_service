@@ -1,5 +1,5 @@
 # This workflow will build a MuleSoft project and deploy to CloudHub
-name: TestCICD Pipeline
+name: CICD Pipeline
 on:
   push:
     branches: [ main ]
