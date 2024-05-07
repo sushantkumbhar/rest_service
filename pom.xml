@@ -37,7 +37,6 @@
 						<password>${anypoint.password}</password>
 						<applicationName>${anypoint.appName}</applicationName>
 						<environment>${anypoint.env}</environment>
-						<region>${anypoint.region}</region>
 						<workers>${anypoint.workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
