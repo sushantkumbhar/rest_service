@@ -3,8 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>705bfe3d-483b-4250-bbcb-e05dd6c2d2f7</groupId>
+	
 	<artifactId>rest_service</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>rest_service</name>
@@ -14,7 +15,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.5.1</app.runtime>
-		<mule.maven.plugin.version>4.0.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -30,21 +31,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudhub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<provider>MC</provider>
-						<environment>${anypoint.env}</environment>
-						<target>Cloudhub-US-East-2</target>
-						<muleVersion>${anypoint.muleVersion}</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
-						<applicationName>${anypoint.appName}</applicationName>
-						<replicas>1</replicas>
-                        <vCores>1</vCores>
-						<deploymentSettings>
-                             <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+					 <cloudhub2Deployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <provider>MC</provider>
+                        <environment>Sandbox</environment>
+                        <target>Cloudhub-US-East-2</target>
+                        <server>Repository</server> <!-- this is where our credentials will be stored -->
+                        <applicationName>${project.artifactId}</applicationName>
+						<releaseChannel>NONE</releaseChannel>
+                        <replicas>1</replicas>
+                        <vCores>0.1</vCores>
+                        <deploymentSettings>
+                            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
                         </deploymentSettings>
-					</cloudhub2Deployment>
+                    </cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -62,6 +62,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+            <id>Repository</id>
+            <name>Private Exchange repository</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+            <layout>default</layout>
+        </repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -91,9 +97,9 @@
 
 	 <distributionManagement>
         <repository>
-            <id>anypoint-exchange-v3</id>
+            <id>Repository</id>
             <name>Corporate Repository</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/705bfe3d-483b-4250-bbcb-e05dd6c2d2f7/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
             <layout>default</layout>
         </repository>
     </distributionManagement>
