@@ -20,9 +20,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>3.7.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -30,18 +30,18 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
+					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>${anypoint.env}</environment>
+						<target>Cloudhub-US-East-1</target>
 						<muleVersion>${anypoint.muleVersion}</muleVersion>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${anypoint.appName}</applicationName>
-						<environment>${anypoint.env}</environment>
-						<region>${anypoint.region}</region>
-						<workers>${anypoint.workers}</workers>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployment>
-					<classifier>---- select project type ----</classifier>
+						<replicas>1</replicas>
+                        <vCores>1</vCores>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
