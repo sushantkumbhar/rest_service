@@ -5,7 +5,7 @@
 	<groupId>705bfe3d-483b-4250-bbcb-e05dd6c2d2f7</groupId>
 	
 	<artifactId>testrestappsushant</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<packaging>mule-application</packaging>
 
 	<name>rest_service</name>
