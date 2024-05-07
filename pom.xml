@@ -33,7 +33,7 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <provider>MC</provider>
                         <environment>Sandbox</environment>
-						<muleVersion>4.6.2</muleVersion>
+						<muleVersion>4.5.1</muleVersion>
                         <target>Cloudhub-US-East-2</target>
                         <server>Repository</server> <!-- this is where our credentials will be stored -->
                         <applicationName>${project.artifactId}</applicationName>
