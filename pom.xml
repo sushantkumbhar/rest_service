@@ -5,7 +5,7 @@
 	<groupId>705bfe3d-483b-4250-bbcb-e05dd6c2d2f7</groupId>
 	
 	<artifactId>testrestappsushant</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>mule-application</packaging>
 
 	<name>rest_service</name>
@@ -33,7 +33,7 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <provider>MC</provider>
                         <environment>Sandbox</environment>
-						<muleVersion>4.4.0</muleVersion>
+						<muleVersion>4.6.3</muleVersion>
                         <target>Cloudhub-US-East-2</target>
                         <server>Repository</server> <!-- this is where our credentials will be stored -->
                         <applicationName>${project.artifactId}</applicationName>
