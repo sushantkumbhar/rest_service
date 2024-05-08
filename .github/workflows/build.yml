@@ -30,7 +30,7 @@ jobs:
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
   deploy:
-    needs: test
+    needs: buld
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to CloudHub 2.0
