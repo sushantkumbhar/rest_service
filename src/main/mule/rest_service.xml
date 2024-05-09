@@ -6,7 +6,11 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="82ba3034-c071-499e-a542-bcbbec8eb9f4" >
+<<<<<<< HEAD
 		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+=======
+		<http:listener-connection host="0.0.0.0" port="8081" />
+>>>>>>> 9925781f4148c954b0ad1b374b141bae16dbd189
 	</http:listener-config>
 	<configuration-properties doc:name="Configuration properties" doc:id="ed6afa6e-4371-4707-ab08-03deca9e5af2" file="config/${env}.yaml" />
 	<flow name="rest_serviceFlow" doc:id="0fcd772d-718d-4cd5-bae3-0063d6f9ae2f" >

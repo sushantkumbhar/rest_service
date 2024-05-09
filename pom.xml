@@ -4,8 +4,13 @@
 
 	<groupId>705bfe3d-483b-4250-bbcb-e05dd6c2d2f7</groupId>
 	
+<<<<<<< HEAD
 	<artifactId>testrestappanil</artifactId>
 	<version>1.0.10</version>
+=======
+	<artifactId>testrestappsushant</artifactId>
+	<version>1.0.9</version>
+>>>>>>> 9925781f4148c954b0ad1b374b141bae16dbd189
 	<packaging>mule-application</packaging>
 
 	<name>rest_service</name>
